@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React, {useState} from 'react'
 import styled from 'styled-components'
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import DocModel from './DocModel';
@@ -7,8 +7,8 @@ const Narbar = () => {
     const docToggle = () => {
         setDocModel(!docModel)
     }
-    const [stockMarket, setStockMarket] = useState("CAN Equity")
-    const [dataAccess, setDataAccess] = useState("Data Access")
+    const stockMarket = "CAN Equity"
+    const dataAccess = "Data Access"
 
     const handleChange = () => {
         // 
