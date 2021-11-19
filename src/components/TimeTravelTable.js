@@ -4,7 +4,9 @@ const TimeTravelTable = ({orderType}) => {
   return (
     <TableContainer>
         <TableHeader>
-            <tr>{orderType}</tr>
+            <tr>
+                <th>{orderType}</th>
+            </tr>
         </TableHeader>
         <thead>
             <tr>

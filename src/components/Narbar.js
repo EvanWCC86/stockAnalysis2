@@ -9,17 +9,21 @@ const Narbar = () => {
     }
     const [stockMarket, setStockMarket] = useState("CAN Equity")
     const [dataAccess, setDataAccess] = useState("Data Access")
+
+    const handleChange = () => {
+        // 
+    }
   return (
     <NarbarSection>
         <Container>
             
-            <select name="ticker" value={stockMarket}>
+            <select name="ticker" value={stockMarket} onChange={handleChange}>
                 <option value="td">CAN Equity</option>
                 <option value="rbc">RBC</option>
                 <option value="cibc">CIBC</option>
             </select>
         
-                <select name="ticker" value={dataAccess}>
+                <select name="ticker" value={dataAccess} onChange={handleChange}>
                 <option value="td">Data Access</option>
                 <option value="rbc">RBC</option>
                 <option value="cibc">CIBC</option>

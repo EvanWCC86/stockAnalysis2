@@ -16,7 +16,7 @@ const SearchForm = () => {
         <Container>
             <Left>
                 <TickerContainer>
-                    <label htmlfor="ticker">Single ticker</label>
+                    <label htmlFor="ticker">Single ticker</label>
                     <select name="ticker" value={stockRequest.ticker} onChange={stockHandleChange}>
                         <option value="td">TD</option>
                         <option value="rbc">RBC</option>
@@ -33,7 +33,7 @@ const SearchForm = () => {
                 </ExchangeContainer>
                 <TimesContainer>
                     <label>Time Stamp</label>
-                    <input type="number" name="" placeholder="hrs" />
+                    <input type="number" placeholder="hrs" />
                     <span>:</span>
                     <input type="number" placeholder="min" />
                     <span>:</span>

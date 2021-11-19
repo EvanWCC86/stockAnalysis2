@@ -1,16 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
+import {Link} from 'react-router-dom'
 const DocModel = () => {
   return (
     <Container>
         <li>
-            <a>Available data</a>
+            <Link to="/">Available data</Link>
         </li>
         <li>
-            <a>API & USER GUIDE</a>
+            <Link to="/">API & USER GUIDE</Link>
         </li>
         <li>
-            <a>Formula Guide</a>
+            <Link to="/">Formula Guide</Link>
         </li>
     </Container>
   )

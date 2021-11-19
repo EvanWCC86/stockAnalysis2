@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+
 import FacebookIcon from '@material-ui/icons/Facebook';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
@@ -39,7 +39,7 @@ const Sidebar2 = ({showSidebar, toggleSidebar}) => {
                 </span>
                 <div>
                     <h3>admin page</h3>
-                    <p></p>
+                    
                 </div>
             </Item>
             <Item>
