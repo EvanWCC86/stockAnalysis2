@@ -33,8 +33,10 @@ const Container = styled.ul `
     
     li{
         list-style: none;
+        margin-bottom: 15px;
     }
     a{
         text-decoration:none;
+        color:white;
     }
 `

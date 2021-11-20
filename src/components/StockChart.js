@@ -1,6 +1,7 @@
 import React,{useEffect,useState} from 'react'
 import Plot from 'react-plotly.js';
 import * as d3 from 'd3';
+import styled from 'styled-components'
 const StockChart = () => {
     const [stockData, setStockData] = useState([])
   
@@ -63,10 +64,21 @@ const StockChart = () => {
         data={
             [trace1]
         }
-        layout={ {width: 552, height: 440, title: 'AAPL'} }
+        
+        
+        
+      layout={ {autosiz:true, title: 'AAPL'} }
+       useResizeHandler
+       style={{objectFit:'contain'}}
+        
       />
     
   )
 }
 
 export default StockChart
+
+// const Container = styled.div `
+//     height: 500px;
+//     width:800px
+// `

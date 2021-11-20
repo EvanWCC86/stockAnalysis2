@@ -30,7 +30,7 @@ const ModelWorkspace = ({toggleWorkspace}) => {
                     <button>analyst view - top & rollups</button>
                 </div>
             </Bottom>
-            <button>save configuration</button>
+            <Button>save configuration</Button>
         </Wrapper>
         
     </Container>
@@ -42,13 +42,12 @@ export default ModelWorkspace
 const Container = styled.div `
     position: absolute;
     z-index: 100;
-    background-color: var(--background-color3);
+    background-color: transparent;
     box-shadow:var(--shadow);
     display: grid;
     place-items: center;
     width:100%;
-    max-width: 500px;
-    height:400px;
+    
     span{
         position:absolute;
         top:10px;
@@ -61,17 +60,54 @@ const Container = styled.div `
     }
 `
 const Wrapper = styled.div `
-    height: 100%;
+    position: relative;
+    width:90%;
+    max-width: 700px;
+    margin:auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    
+    background-color: gray;
+    height: 400px;
+
+    p{
+        text-transform: capitalize;
+    }
 `
-const Top = styled.div ``
+const Top = styled.div `
+    text-align: center;
+
+    button{
+        text-transform: capitalize;
+        padding:6px 20px;
+        border-radius:6px;
+        border:none;
+        outline:none;
+        margin: 8px;
+        cursor: pointer;
+        
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
+   
+`
 const Middle = styled.div `
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    button{
+       border:none;
+       outline:none;
+       padding:6px 20px;
+       text-transform:capitalize;
+       border-radius: 8px;
+        cursor: pointer;
+       &:hover{
+           transform: scale(1.2);
+       }
+    }
 `
 const Bottom = styled.div `
     text-align: center;
@@ -81,4 +117,31 @@ const Bottom = styled.div `
         flex-direction: column;
 
     }
+    button{
+       border:none;
+       outline:none;
+       padding:6px 20px;
+       text-transform:capitalize;
+       border-radius: 8px;
+        cursor: pointer;
+        margin-top: 10px;
+       &:hover{
+           transform: scale(1.2);
+       }
+    }
+`
+const Button = styled.button `
+    
+        text-transform: capitalize;
+        padding:6px 20px;
+        border-radius:6px;
+        border:none;
+        outline:none;
+        margin: 8px;
+        cursor: pointer;
+        
+        &:hover{
+            transform: scale(1.2);
+        }
+    
 `

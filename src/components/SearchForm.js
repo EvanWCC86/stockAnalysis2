@@ -24,7 +24,7 @@ const SearchForm = () => {
                     </select>
                 </TickerContainer>
                 <DateContainer>
-
+                    <input type="date" value={stockRequest.date} onChange={stockHandleChange} />
                 </DateContainer>
                 <ExchangeContainer>
                     <select name="venue" value={stockRequest.venue} onChange={stockHandleChange}>
@@ -131,7 +131,13 @@ const Right = styled.div `
 const TickerContainer = styled.div `
     margin-right:10px;
 `
-const DateContainer = styled.div ``
+const DateContainer = styled.div `
+    
+    input{
+        color:var(--background-color2);
+        background-color: white;
+    }
+`
 const ExchangeContainer = styled.div `
  margin-right:10px;
 `
