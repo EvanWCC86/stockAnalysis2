@@ -1,7 +1,7 @@
 import React,{useEffect,useState} from 'react'
 import Plot from 'react-plotly.js';
 import * as d3 from 'd3';
-import styled from 'styled-components'
+
 const StockChart = () => {
     const [stockData, setStockData] = useState([])
   
