@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
-const TimeTravelTable = ({orderType}) => {
+const TimeTravelTable = ({orderType,buy}) => {
   return (
     <TableContainer>
         <TableHeader>
             <tr>
-                <th>{orderType}</th>
+                <Title buy={buy}>{orderType}</Title>
             </tr>
         </TableHeader>
         <thead>
@@ -21,13 +21,13 @@ const TimeTravelTable = ({orderType}) => {
                 <td>toronto</td>
                 <td>Broker1</td>
                 <td>15</td>
-                <td>10.25</td>
+                <Price buy={buy}>10.25</Price>
             </tr>
             <tr>
                 <td>toronto</td>
                 <td>Broker1</td>
                 <td>15</td>
-                <td>10.25</td>
+                <Price buy={buy}>10.25</Price>
             </tr>
         </tbody>
     </TableContainer>
@@ -46,10 +46,12 @@ const TableContainer = styled.table `
     th{
         border:1px solid black;
         padding:10px;
+       
     }
     td{
         border:1px solid black;
-        padding:5px;
+        padding:10px;
+        
     }
    
 `
@@ -59,7 +61,18 @@ const TableHeader = styled.thead `
     
     tr{
         transform:uppercase;
+        text-align: left;
+        
     }
+`
+
+const Title = styled.th `
+    color:${props => props.buy ? "green" : "red"};
+    
+    
+`
+const Price = styled.td `
+    color:${props => props.buy ? "green" : "red"};
 `
 
 

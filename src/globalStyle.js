@@ -19,8 +19,9 @@ const GlobalStyle = createGlobalStyle `
     }
     body{
         font-family: 'Poppins', sans-serif;;
-        background-color: black;
-        color:white;
+        background:${({ theme }) => theme.body};
+        color:${({ theme }) => theme.text};
+        transition: all 0.25s linear;
     }
     input{
       background-color: var(--background-color3);

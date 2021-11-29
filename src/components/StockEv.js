@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-// import {Link} from 'react-router-dom'
+
 import Brightness7OutlinedIcon from '@material-ui/icons/Brightness7Outlined';
 import LaunchOutlinedIcon from '@material-ui/icons/LaunchOutlined';
 
@@ -9,7 +9,7 @@ const StockEv = () => {
         {
             id:"1",
             timestamp:"10:30:31.500",
-            messageType:"Add Order",
+            messageType:"add order",
             venue:"OMGA",
             order:"918898",
             side:"BUY",
@@ -62,6 +62,28 @@ const StockEv = () => {
             volume:400,
         },
     ]
+
+    const checkColor = (item) => {
+       
+       if(item === "add order") {
+        return 'green'
+       }
+       if(item === "excustion") {
+        return 'blue'
+       }
+       if(item === "cancel order") {
+        return 'red'
+       }
+       if(item === "change order") {
+        return 'yellow'
+       }
+       if(item === "system events") {
+        return 'purple'
+       }
+       
+    }
+   
+
   return (
     <EventSection>
        <HeaderSection>
@@ -91,10 +113,13 @@ const StockEv = () => {
             </thead>
             <tbody>
                 
-                {data.map((item) => (
-                    <tr key={item.id}>
+                {data.map((item) => {
+                   checkColor(item.messageType)
+                   
+                    return (
+                        <tr key={item.id}>
                         <td>{item.timestamp}</td>
-                        <td>{item.messageType}</td>
+                        <Type typeColor={checkColor(item.messageType)}>{item.messageType}</Type>
                         <td>{item.venue}</td>
                         <td>{item.order}</td>
                         <td>{item.side}</td>
@@ -102,7 +127,9 @@ const StockEv = () => {
                         <td>{item.price}</td>
                         <td>{item.volume}</td>
                     </tr>
-                ))}
+                    )
+                    
+                })}
                 
             </tbody>
        </EventsTable>
@@ -142,5 +169,14 @@ const EventsTable = styled.table `
     tbody{
         box-shadow:var(--shadow);
         background-color:var(--background-color3);
+
+        td{
+            padding:5px;
+        }
     }
+`
+const Type = styled.td `
+    border:1px solid ${props => props.typeColor};
+    color:${props => props.typeColor};
+    text-transform: capitalize;
 `

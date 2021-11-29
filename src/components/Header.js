@@ -6,16 +6,23 @@ import NotificationsNoneIcon from '@material-ui/icons/NotificationsNone';
 import IconButton from '@material-ui/core/IconButton';
 import {Link} from 'react-router-dom'
 import styled from 'styled-components'
-const Header = ({toggleSidebar}) => {
-    
+import {useGlobalContext} from '../contextapi/context'
+const Header = () => {
+    const {toggleTheme,toggleSidebar} = useGlobalContext();
   return (
     <HeaderSection>
         <Container>
             <h3>Alpha Book</h3>
             <Right>
-                <IconButton>
-                    <SearchIcon />
-                </IconButton>
+                <ThemeButton  onClick={toggleTheme}>
+                    changer theme
+                </ThemeButton>
+                <div>
+                    <input type="text" />
+                    <IconButton>
+                        <SearchIcon />
+                    </IconButton>
+                </div>
                 <IconButton onClick={toggleSidebar} style={{backgroundColor:"red"}}>
                     <Brightness5OutlinedIcon />
                 </IconButton>
@@ -40,7 +47,7 @@ const Header = ({toggleSidebar}) => {
 export default Header
 
 const HeaderSection = styled.header `
-    height: 40px;
+    height: 50px;
 `
 const Container = styled.div `
     height: 100%;
@@ -52,28 +59,38 @@ const Container = styled.div `
     align-items:center;
 
     h3{
-        background-color: #ff8177;
-        background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
-        background-size: 100%;
-        background-clip:text;
-        -webkit-background-clip: text;
-        /* -moz-background-clip: text; */
-        
-        
-        -webkit-text-fill-color: transparent;
-        -moz-text-fill-color: transparent;
-        
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-        text-decoration: none;
-        font-size: 1.5rem;
+        color: red;
+       cursor: pointer;
+       font-size: 1.5rem;
     }
 `
 const Right = styled.div `
     height:100%;
     display: flex;
     align-items:center;
+
+    div{
+        display:flex;
+        align-items:center;
+        justify-content: space-between;
+        border:1px solid white;
+        background-color: white;
+        color:black;
+        border-radius: 10px;
+        height: 80%;
+        margin-right: 10px;
+        
+        svg{
+            color:black;
+        }
+        input{
+            border:none;
+            outline:none;
+            padding:5px;
+            background-color: transparent;
+            
+        }
+    }
     
     svg{
         color:white;
@@ -87,5 +104,18 @@ const Right = styled.div `
         cursor: pointer;
     }
 
+    
+
    
+`
+const ThemeButton = styled.button `
+    padding:6px 20px;
+    border-radius: 8px;
+    border:none;
+    outline:none;
+    background-color:red;
+    color:white;
+    text-transform: capitalize;
+    margin-right:5px;
+    cursor: pointer;
 `

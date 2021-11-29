@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import styled from 'styled-components'
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import DocModel from './DocModel';
+import {Link} from 'react-router-dom'
 const Narbar = () => {
     const [docModel, setDocModel] = useState(false)
     const docToggle = () => {
@@ -30,7 +31,7 @@ const Narbar = () => {
             </select>
         
         
-            <span>Analytics</span>
+            <Link to="/analysis">Analytics</Link>
             <div>
                 <button onClick={docToggle}>
                     <span>Documentation</span>
@@ -46,7 +47,7 @@ const Narbar = () => {
 export default Narbar
 
 const NarbarSection = styled.nav `
-    background-color: var(--background-color3);
+    background-color: ${({ theme }) => theme.backgroundColor2};
     height: 50px;
 `
 const Container = styled.div `
@@ -69,5 +70,18 @@ const Container = styled.div `
     select{
         padding:5px;
     }
+    a{
+        background-color: red;
+        text-decoration: none;
+        color:white;
+        padding:5px 10px;
+        border-radius:5px;
+
+        &:hover{
+            transform:scale(1.2)
+        }
+    }
 `
+
+
 

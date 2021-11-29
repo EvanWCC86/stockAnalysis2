@@ -29,7 +29,7 @@ const TimeTravel = () => {
                 </form>
            </Header>
            <Tables>
-               <TimeTravelTable orderType="buy" />
+               <TimeTravelTable orderType="buy" buy />
                <TimeTravelTable orderType="sell" />
            </Tables>
        </Container>

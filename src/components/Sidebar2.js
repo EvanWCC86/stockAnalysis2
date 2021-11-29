@@ -10,9 +10,10 @@ import NotificationsNoneIcon from '@material-ui/icons/NotificationsNone';
 import EnhancedEncryptionOutlinedIcon from '@material-ui/icons/EnhancedEncryptionOutlined';
 import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
 import AppsOutlinedIcon from '@material-ui/icons/AppsOutlined';
-
+import {useGlobalContext} from '../contextapi/context'
 import styled from 'styled-components'
-const Sidebar2 = ({showSidebar, toggleSidebar}) => {
+const Sidebar2 = () => {
+    const { showSidebar, toggleSidebar } = useGlobalContext();
     return (
         <SidebarSection showSidebar={showSidebar}>
           <SidebarContainer>
@@ -90,6 +91,7 @@ const SidebarSection = styled.div `
     max-width:300px;
     height:100vh;
     background-color:var(--background-color2);
+
     position:fixed;
     top:0;
     left: 0;
@@ -105,6 +107,7 @@ const SidebarContainer = styled.div `
     justify-content: space-between;
     /* width:90%;
     margin:0 auto; */
+   
     
 `
 const SidebarTop = styled.div `
@@ -114,6 +117,7 @@ const SidebarTop = styled.div `
     height: 60px;
    
     background-color: var(--background-color3);
+    
     width:100%;
     padding-left: 10px;
     padding-right: 10px;

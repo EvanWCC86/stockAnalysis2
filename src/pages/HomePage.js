@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React from 'react'
 import ControlPanel from '../components/ControlPanel'
 
 import Header from '../components/Header'
@@ -16,15 +16,12 @@ import Sidebar2 from '../components/Sidebar2'
 
 
 const HomePage = () => {
-  const [showSidebar, setShowSidebar] = useState(false);
-  const toggleSidebar = () => {
-    setShowSidebar(!showSidebar)
-  }
+  
   return (
     <div>
-      <Header toggleSidebar={toggleSidebar} />
+      <Header />
       <Navbar />
-      <Sidebar2 showSidebar={showSidebar} toggleSidebar={toggleSidebar} />
+      <Sidebar2 />
       <SubNavbar />
       <SearchForm />
      

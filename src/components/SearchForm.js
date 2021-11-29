@@ -18,9 +18,9 @@ const SearchForm = () => {
                 <TickerContainer>
                     <label htmlFor="ticker">Single ticker</label>
                     <select name="ticker" value={stockRequest.ticker} onChange={stockHandleChange}>
-                        <option value="td">TD</option>
-                        <option value="rbc">RBC</option>
-                        <option value="cibc">CIBC</option>
+                        <option value="TD">TD</option>
+                        <option value="RBC">RBC</option>
+                        <option value="CIBC">CIBC</option>
                     </select>
                 </TickerContainer>
                 <DateContainer>
