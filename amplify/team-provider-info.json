@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-alphabookui-dev-03036-authRole",
+      "UnauthRoleArn": "arn:aws:iam::689805482673:role/amplify-alphabookui-dev-03036-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::689805482673:role/amplify-alphabookui-dev-03036-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-alphabookui-dev-03036-deployment",
+      "UnauthRoleName": "amplify-alphabookui-dev-03036-unauthRole",
+      "StackName": "amplify-alphabookui-dev-03036",
+      "StackId": "arn:aws:cloudformation:us-east-1:689805482673:stack/amplify-alphabookui-dev-03036/7c41dcb0-50d5-11ec-9c9b-0a5d84963829",
+      "AmplifyAppId": "d3q1l7ey54qpjl"
+    },
+    "categories": {
+      "auth": {
+        "alphabookui6ade48c4": {}
+      }
+    }
+  }
+}

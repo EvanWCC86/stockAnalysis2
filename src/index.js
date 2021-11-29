@@ -6,8 +6,6 @@ import { AppProvider } from './contextapi/context'
 import reportWebVitals from './reportWebVitals';
 
 
-  
-
 ReactDOM.render(
   <React.StrictMode>
     <AppProvider>

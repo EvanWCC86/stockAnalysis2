@@ -7,6 +7,8 @@ import IconButton from '@material-ui/core/IconButton';
 import {Link} from 'react-router-dom'
 import styled from 'styled-components'
 import {useGlobalContext} from '../contextapi/context'
+
+// import {AmplifySignOut} from '@aws-amplify/ui-react'
 const Header = () => {
     const {toggleTheme,toggleSidebar} = useGlobalContext();
   return (
@@ -36,7 +38,7 @@ const Header = () => {
                 <Link to="/profile">
                     <img src="../../images/profilepic.jpg" alt="profile" />
                 </Link>
-                
+                {/* <AmplifySignOut /> */}
                 
             </Right>
         </Container>

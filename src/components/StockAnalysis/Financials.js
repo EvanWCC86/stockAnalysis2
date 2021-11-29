@@ -5,7 +5,7 @@ import IncomeStatement from './IncomeStatement'
 import BalanceStament from './BalanceStament'
 import CashFlow from './CashFlow'
 
-const Financials = ({CashUrl, BalanceUrl,IncUrl}) => {
+const Financials = () => {
   
   
     
@@ -15,9 +15,9 @@ const Financials = ({CashUrl, BalanceUrl,IncUrl}) => {
 
   return (
     <Container>
-      <IncomeStatement IncUrl={IncUrl} />
-      <BalanceStament BalanceUrl={BalanceUrl} />
-      <CashFlow CashUrl={CashUrl} />
+      <IncomeStatement />
+      <BalanceStament />
+      <CashFlow />
     </Container>
   )
 }

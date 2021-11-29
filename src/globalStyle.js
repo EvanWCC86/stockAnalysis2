@@ -1,5 +1,5 @@
 import { createGlobalStyle,keyframes } from 'styled-components'
-
+import "@aws-amplify/ui-react/styles.css";
 const GlobalStyle = createGlobalStyle `
     :root{
         --background-color:#F4F5F7;

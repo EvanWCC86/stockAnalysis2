@@ -12,6 +12,13 @@ import {ThemeProvider} from 'styled-components'
 import {lightTheme, darkTheme} from './theme';
 import {useGlobalContext} from './contextapi/context'
 
+import Amplify from 'aws-amplify';
+import awsconfig from './aws-exports';
+import {withAuthenticator} from '@aws-amplify/ui-react'
+
+
+Amplify.configure(awsconfig)
+
 const App = () => {
 
   const {theme} = useGlobalContext();
@@ -33,4 +40,4 @@ const App = () => {
   )
 }
 
-export default App
+export default withAuthenticator(App);
