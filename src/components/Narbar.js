@@ -47,7 +47,7 @@ const Narbar = () => {
 export default Narbar
 
 const NarbarSection = styled.nav `
-    background-color: ${({ theme }) => theme.backgroundColor2};
+    background-color: var(--background-color3);
     height: 50px;
 `
 const Container = styled.div `

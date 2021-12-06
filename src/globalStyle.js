@@ -1,5 +1,5 @@
 import { createGlobalStyle,keyframes } from 'styled-components'
-// import "@aws-amplify/ui-react/styles.css";
+
 const GlobalStyle = createGlobalStyle `
     :root{
         --background-color:#F4F5F7;
@@ -20,8 +20,8 @@ const GlobalStyle = createGlobalStyle `
     }
     body{
         font-family: 'Poppins', sans-serif;;
-        background:${({ theme }) => theme.body};
-        color:${({ theme }) => theme.text};
+        background:var(--background-color2);
+        color:gray;
         transition: all 0.25s linear;
     }
     input{
