@@ -18,9 +18,9 @@ const SearchForm = () => {
                 <TickerContainer>
                     <label htmlFor="ticker">Single ticker</label>
                     <select name="ticker" value={stockRequest.ticker} onChange={stockHandleChange}>
+                        <option value="AAPL">AAPL</option>
+                        <option value="IBM">IBM</option>
                         <option value="TD">TD</option>
-                        <option value="RBC">RBC</option>
-                        <option value="CIBC">CIBC</option>
                     </select>
                 </TickerContainer>
                 <DateContainer>
@@ -87,9 +87,8 @@ const Left = styled.form `
         border: none;
         outline: none;
         border-radius: 4px;
-        background: #833ab4;
-        background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4 );
-        background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+        background-color: var(--button-color);
+        
         color: #fff;
         transition: all 0.3s ease;
         cursor: pointer;
@@ -115,9 +114,7 @@ const Right = styled.div `
         border: none;
         outline: none;
         border-radius: 4px;
-        background: #833ab4;
-        background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4 );
-        background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+        background-color:var(--button-color);
         color: #fff;
         transition: all 0.3s ease;
         cursor: pointer;

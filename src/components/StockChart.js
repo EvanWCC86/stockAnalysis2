@@ -1,28 +1,30 @@
-import React,{useEffect,useState} from 'react'
+import React from 'react'
 import Plot from 'react-plotly.js';
-import * as d3 from 'd3';
+
+import {useGlobalContext} from '../contextapi/context'
 
 const StockChart = () => {
-    const [stockData, setStockData] = useState([])
+    // const [stockData, setStockData] = useState([])
+  const {stockData,stockName} = useGlobalContext();
   
-    useEffect(() => {
-        d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv').then(data => {
-            setStockData({
-                date:data.map((d) => d.Date ),
-                open:data.map((d) => d["AAPL.Open"]),
-                close:data.map((d) => d["AAPL.Close"] ),
-                high:data.map((d) => d["AAPL.High"] ),
-                low:data.map((d) => d["AAPL.Low"] ),
+    // useEffect(() => {
+    //     d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv').then(data => {
+    //         setStockData({
+    //             date:data.map((d) => d.Date ),
+    //             open:data.map((d) => d["AAPL.Open"]),
+    //             close:data.map((d) => d["AAPL.Close"] ),
+    //             high:data.map((d) => d["AAPL.High"] ),
+    //             low:data.map((d) => d["AAPL.Low"] ),
                 
-            })
+    //         })
                    
-            // })
-            console.log(data)
-        })
+    //         // })
+    //         console.log(data)
+    //     })
            
         
-    },[])
-    console.log(stockData)
+    // },[])
+    // console.log(stockData)
     
     // useEffect(() => {
     //     stockData?.map((stock) => {
@@ -34,23 +36,23 @@ const StockChart = () => {
     // },[])
     // console.log(filterData)
 
-    var trace1 = {
+    const trace1 = {
   
-        x: stockData.date,
-        
-        close: stockData.close,
+        x: stockData?.date,
+       
+        close: stockData?.close,
         
         decreasing: {line: {color: 'red'}}, 
         
-        high: stockData.high,
+        high: stockData?.high,
         
         increasing: {line: {color: 'green'}}, 
         
         line: {color: 'rgba(31,119,180,1)'}, 
         
-        low: stockData.low,
+        low: stockData?.low,
         
-        open: stockData.open,
+        open: stockData?.open,
         
         type: 'candlestick', 
         xaxis: 'x', 
@@ -59,7 +61,7 @@ const StockChart = () => {
 
 
   return (
-    
+    // <div style={{ width:'100%', height: '100%',objectFit:"cover" }}>
       <Plot
         data={
             [trace1]
@@ -67,12 +69,14 @@ const StockChart = () => {
         
         
         
-      layout={ {autosiz:true, title: 'AAPL'} }
-       useResizeHandler
-       style={{objectFit:'contain'}}
+      layout={{autosiz:true, title: stockName,autosize: true}}
+       useResizeHandler={true}
+    //    style={{objectFit:'contain'}}
+        style={{width:'100%',height:'100%',objectFit:'cover'}}
+        config ={{responsive: true }}
         
       />
-    
+    // </div>
   )
 }
 

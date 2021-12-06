@@ -32,6 +32,8 @@ const Overview = () => {
       
       {overViewData && (
         <>
+        <p><span>Company Description: {overViewData["Description"]}</span></p>
+        <Wrapper>
         <Item>
         <h4>52wk range</h4>
         <span>{overViewData["52WeekLow"]}-{overViewData["52WeekHigh"]}</span>
@@ -75,6 +77,7 @@ const Overview = () => {
         <h4>200 Day Moving</h4>
         <span>{overViewData["200DayMovingAverage"]}</span>
       </Item>
+      </Wrapper>
       </>
       )}
     </Container>
@@ -88,7 +91,15 @@ const Container = styled.div `
   max-width:800px;
   margin:40px auto;
   padding:20px auto;
-  display:grid;
+
+  p{
+    margin-bottom: 20px;
+  }
+  
+`
+const Wrapper = styled.div `
+
+display:grid;
   grid-gap: 20px;
 
   @media screen and (min-width: 768px) {

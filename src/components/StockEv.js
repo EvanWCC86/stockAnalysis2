@@ -145,6 +145,7 @@ const HeaderSection = styled.div `
     display:flex;
     justify-content:space-between;
     align-items:center;
+    margin:20px auto;
 
     div{
         display:flex;

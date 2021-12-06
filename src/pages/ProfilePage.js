@@ -85,6 +85,20 @@ const Top = styled.div `
         height:120px;
         border-radius:50%;
     }
+    button{
+        margin:10px auto;
+        text-transform:capitalize;
+        padding:8px 20px;
+        background-color:var(--button-color);
+        color:white;
+        border:none;
+        outline:none;
+        border-radius:6px;
+        cursor:pointer;
+        &:hover{
+            transform:scale(1.2)
+        }
+    }
 `
 const Middle = styled.div `
     width:90%;
@@ -106,4 +120,23 @@ const Middle = styled.div `
         width:300px;
     }
 `
-const Bottom = styled.div ``
+const Bottom = styled.div `
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:20px auto;
+
+    button{
+        margin-right:20px;
+        padding:8px 23px;
+        background-color:var(--button-color);
+        color:white;
+        border:none;
+        outline:none;
+        border-radius: 8px;
+        cursor: pointer;
+        &:hover{
+            transform:scale(1.2)
+        }
+    }
+`

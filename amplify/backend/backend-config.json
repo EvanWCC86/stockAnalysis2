@@ -1,6 +1,6 @@
 {
   "auth": {
-    "alphabookui6ade48c4": {
+    "alphabookui138bf288": {
       "service": "Cognito",
       "providerPlugin": "awscloudformation",
       "dependsOn": [],

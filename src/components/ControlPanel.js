@@ -95,9 +95,7 @@ const ControlNarbar = styled.div `
         border: none;
         outline: none;
         border-radius: 4px;
-        background: #833ab4;
-        background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4 );
-        background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+        background-color: var(--button-color);
         color: #fff;
         transition: all 0.3s ease;
         cursor: pointer;

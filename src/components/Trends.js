@@ -21,9 +21,9 @@ const Trends = () => {
                 </select>
            </Header>
            <TrendChartContainer>
-               <TrendChartCard name="TD (Toronto Dominion)" date="Oct 10,2021" time="10:30.31 .500" />
-               <TrendChartCard name="TD (Toronto Dominion)" date="Oct 10,2021" time="10:30.31 .500" />
-               <TrendChartCard name="TD (Toronto Dominion)" date="Oct 10,2021" time="10:30.31 .500" />
+               <TrendChartCard date="Oct 10,2021" time="10:30.31 .500" />
+               <TrendChartCard date="Oct 10,2021" time="10:30.31 .500" />
+               <TrendChartCard date="Oct 10,2021" time="10:30.31 .500" />
            </TrendChartContainer>
           
        </Container>

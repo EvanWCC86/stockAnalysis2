@@ -1,5 +1,5 @@
 import { createGlobalStyle,keyframes } from 'styled-components'
-import "@aws-amplify/ui-react/styles.css";
+// import "@aws-amplify/ui-react/styles.css";
 const GlobalStyle = createGlobalStyle `
     :root{
         --background-color:#F4F5F7;
@@ -10,6 +10,7 @@ const GlobalStyle = createGlobalStyle `
         --border:.1rem solid $green;
         --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
         --dark-shadow:0 0 0 100vw rgba(0,0,0,.5);
+        --button-color:#085AB2;
     }
 
     *{
@@ -29,6 +30,10 @@ const GlobalStyle = createGlobalStyle `
     select{
       background-color: var(--background-color3);
       color:white;
+    }
+
+    a{
+      text-decoration: none;
     }
    
 `

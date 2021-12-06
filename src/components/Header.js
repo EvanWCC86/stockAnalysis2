@@ -8,24 +8,25 @@ import {Link} from 'react-router-dom'
 import styled from 'styled-components'
 import {useGlobalContext} from '../contextapi/context'
 
-// import {AmplifySignOut} from '@aws-amplify/ui-react'
+
+
 const Header = () => {
-    const {toggleTheme,toggleSidebar} = useGlobalContext();
+    const {toggleSidebar} = useGlobalContext();
   return (
     <HeaderSection>
         <Container>
-            <h3>Alpha Book</h3>
+            <Link to="/">
+                <h3>Alpha Book</h3>
+            </Link>
             <Right>
-                <ThemeButton  onClick={toggleTheme}>
-                    changer theme
-                </ThemeButton>
+                
                 <div>
                     <input type="text" />
                     <IconButton>
                         <SearchIcon />
                     </IconButton>
                 </div>
-                <IconButton onClick={toggleSidebar} style={{backgroundColor:"red"}}>
+                <IconButton onClick={toggleSidebar} style={{backgroundColor:"#085AB2"}}>
                     <Brightness5OutlinedIcon />
                 </IconButton>
                 <IconButton>
@@ -38,7 +39,7 @@ const Header = () => {
                 <Link to="/profile">
                     <img src="../../images/profilepic.jpg" alt="profile" />
                 </Link>
-                {/* <AmplifySignOut /> */}
+                
                 
             </Right>
         </Container>
@@ -61,7 +62,7 @@ const Container = styled.div `
     align-items:center;
 
     h3{
-        color: red;
+        color: var(--button-color);
        cursor: pointer;
        font-size: 1.5rem;
     }
@@ -110,14 +111,4 @@ const Right = styled.div `
 
    
 `
-const ThemeButton = styled.button `
-    padding:6px 20px;
-    border-radius: 8px;
-    border:none;
-    outline:none;
-    background-color:red;
-    color:white;
-    text-transform: capitalize;
-    margin-right:5px;
-    cursor: pointer;
-`
+

@@ -90,13 +90,15 @@ const NavbarContainer = styled.div `
     justify-content: center;
     overflow-x: scroll;
     span{
-        color:red;
+        color:white;
         margin-right: 10px;
         text-transform: capitalize;
         cursor: pointer;
-        
+        background: var(--button-color);
+        padding:8px 20px;
         &:hover{
             color:blue;
+            
         }
 
     }

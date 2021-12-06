@@ -71,7 +71,7 @@ const Container = styled.div `
         padding:5px;
     }
     a{
-        background-color: red;
+        background-color: var(--button-color);
         text-decoration: none;
         color:white;
         padding:5px 10px;

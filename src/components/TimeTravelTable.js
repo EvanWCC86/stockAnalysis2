@@ -29,6 +29,18 @@ const TimeTravelTable = ({orderType,buy}) => {
                 <td>15</td>
                 <Price buy={buy}>10.25</Price>
             </tr>
+            <tr>
+                <td>toronto</td>
+                <td>Broker1</td>
+                <td>15</td>
+                <Price buy={buy}>10.25</Price>
+            </tr>
+            <tr>
+                <td>toronto</td>
+                <td>Broker1</td>
+                <td>15</td>
+                <Price buy={buy}>10.25</Price>
+            </tr>
         </tbody>
     </TableContainer>
   )

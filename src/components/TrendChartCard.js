@@ -2,14 +2,16 @@ import React from 'react'
 import styled from 'styled-components'
 import StockChart from './StockChart'
 import {Link} from 'react-router-dom'
-const TrendChartCard = ({name,date,time}) => {
+import {useGlobalContext} from '../contextapi/context'
+const TrendChartCard = ({date,time}) => {
+    const {stockName} = useGlobalContext()
   return (
     <Container>
         <ChartContainer>
             <StockChart />
         </ChartContainer>
         <Content>
-            <h3>{name}</h3>
+            <h3>{stockName}</h3>
             <span>{date}</span>
             <span>{time}</span>
             <Link to="/chart">
@@ -32,6 +34,7 @@ const ChartContainer = styled.div `
     height: 180px;
     width:100%;
     overflow: hidden;
+    
 `
 const Content = styled.div `
     padding:10px;
@@ -50,9 +53,7 @@ const Content = styled.div `
         border: none;
         outline: none;
         border-radius: 4px;
-        background: #833ab4;
-        background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4 );
-        background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+        background-color: var(--button-color);
         color: #fff;
         transition: all 0.3s ease;
         cursor: pointer;
